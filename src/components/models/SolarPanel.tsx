@@ -27,9 +27,9 @@ type ActionName = '150W_variant_02' | 'Plane.052'
 type GLTFActions = Record<ActionName, THREE.AnimationAction>
 
 export function SolarPanelModel(props: JSX.IntrinsicElements['group']) {
-  const group = useRef<THREE.Group>()
+  const group = useRef<THREE.Group>(null)
   const { nodes, materials, animations } = useGLTF('/models/others/Solar Panel.glb') as GLTFResult
-  const { actions } = useAnimations<GLTFActions>(animations, group)
+  const { actions } = useAnimations<any>(animations, group)
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">

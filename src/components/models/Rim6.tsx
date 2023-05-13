@@ -19,9 +19,9 @@ type ActionName = 'rims-6'
 type GLTFActions = Record<ActionName, THREE.AnimationAction>
 
 export function RimModel6(props: JSX.IntrinsicElements['group']) {
-  const group = useRef<THREE.Group>()
+  const group = useRef<THREE.Group>(null)
   const { nodes, materials, animations } = useGLTF('/models/rims/Rim 6.glb') as GLTFResult
-  const { actions } = useAnimations<GLTFActions>(animations, group)
+  const { actions } = useAnimations<any>(animations, group)
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">

@@ -24,9 +24,9 @@ type ActionName = 'Bolt.025' | 'Plane.053' | 'Plane.055'
 type GLTFActions = Record<ActionName, THREE.AnimationAction>
 
 export function SteeringModel4(props: JSX.IntrinsicElements['group']) {
-  const group = useRef<THREE.Group>()
+  const group = useRef<THREE.Group>(null)
   const { nodes, materials, animations } = useGLTF('/models/steerings/Steering 4.glb') as GLTFResult
-  const { actions } = useAnimations<GLTFActions>(animations, group)
+  const { actions } = useAnimations<any>(animations, group)
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">

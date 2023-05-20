@@ -5,7 +5,6 @@ interface Attributes{
 }
 
 interface AllFeature{
-    wheels:Attributes[],
     steering:Attributes[],
     rims:Attributes[],
     solar_panel:Attributes[],
@@ -14,10 +13,6 @@ interface AllFeature{
 }
 
 export const allFeatures:AllFeature = {
-    wheels:[
-    // {id:2,feature_name:"Wheel 1 ",model:"",},
-    // {id:3,feature_name:"Attribute 3",momdel:"",},
-    ], 
     steering:[
     {id:1,feature_name:"Steering 1",model:"/models/steerings/Steering 1.glb",},
     {id:2,feature_name:"Steering 2",model:"/models/steerings/Steering 2.glb",},

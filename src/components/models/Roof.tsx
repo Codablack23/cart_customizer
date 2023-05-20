@@ -21,7 +21,7 @@ export function RoofModel(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF('/models/others/Top Roof Carrier.glb') as GLTFResult
   return (
     <group {...props} dispose={null}>
-      <mesh geometry={nodes.ROOF.geometry} material={materials['Black.001']} position={[-0.01, 3.43, -1.36]} scale={[0.01, 0.01, 0.02]} />
+      <mesh geometry={nodes.ROOF.geometry} material={materials['Black.001']} position={[-0.01, 3.35, -1.36]} scale={[0.01, 0.01, 0.02]} />
     </group>
   )
 }

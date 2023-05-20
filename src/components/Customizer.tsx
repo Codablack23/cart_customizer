@@ -5,7 +5,7 @@ import { FeatureContext } from "../contexts/FeatureContext"
 type FeatureType = {
     name:string,
     id:number,
-    key:"wheels"|"steering"|"solar_panel"|"rims"|"basket"|"roof",
+    key:"steering"|"solar_panel"|"rims"|"basket"|"roof",
 }
 
 interface FeatureProps{
@@ -64,7 +64,6 @@ const Feature = ({feature}:FeatureProps)=>{
 }
 export default function Customizer(){
     const features:FeatureType[]= [
-        {name:"Wheels",id:1,key:"wheels"},
         {name:"Steering Wheels",id:1,key:"steering"},
         {name:"Rims",id:1,key:"rims"},
         {name:"Solar Panel",id:1,key:"solar_panel"},

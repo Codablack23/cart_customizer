@@ -8,6 +8,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 import Features from './models/Feature'
+import { SeatRestModel } from './models/SEATREST'
 // import {SteeringModel1} from './models/Steering1'
 // import {SolarPanelModel} from './models/SolarPanel'
 // import {BasketModel} from './models/Basket'
@@ -381,11 +382,12 @@ export function KartModel(props: JSX.IntrinsicElements['group']) {
       <mesh geometry={nodes.Cylinder002.geometry} material={materials['Black Plastic']} position={[0.06, 3.06, 0.87]} rotation={[Math.PI / 2, 0, -Math.PI / 2]} scale={0.04} />
       <mesh geometry={nodes.Cube089.geometry} material={materials['Material.004']} position={[0.04, 0.18, -0.41]} rotation={[Math.PI, 0, Math.PI]} scale={[3.49, 3.49, 2.94]} />
       <mesh geometry={nodes.Cube088.geometry} material={materials.Steel} position={[0.02, 3.13, -1.91]} rotation={[-2.95, 0, -Math.PI]} scale={0.02} />
-      <mesh geometry={nodes.Cube084.geometry} material={materials['Material.023']} position={[0.03, 1.79, 0.69]} rotation={[1.83, 0, Math.PI]} scale={[0.37, 0.29, 0.35]} />
-     <group position={[0.03, 1.82, -0.5]} rotation={[1.83, 0, Math.PI]} scale={[0.37, 0.35, 0.31]}>
+      <SeatRestModel/>
+      {/* <mesh name="seat-rest-1" geometry={nodes.Cube084.geometry} material={materials['Material.023']} position={[0.03, 1.79, 0.69]} rotation={[1.83, 0, Math.PI]} scale={[0.37, 0.29, 0.35]} /> */}
+      {/* <group name="seat-rest-1" position={[0.03, 1.82, -0.5]} rotation={[1.83, 0, Math.PI]} scale={[0.37, 0.35, 0.31]}>
         <mesh geometry={nodes.Cube083_1.geometry} material={materials['Material.023']} />
         <mesh geometry={nodes.Cube083_2.geometry} material={materials['Material.014']} />
-      </group>
+      </group> */}
        <group position={[0.03, 1.33, -0.9]} rotation={[Math.PI, 0, Math.PI]} scale={[0.38, 0.35, 0.39]}>
         <mesh geometry={nodes.Cube082_1.geometry} material={materials['Material.023']} />
         <mesh geometry={nodes.Cube082_2.geometry} material={materials['Material.024']} />
@@ -393,10 +395,10 @@ export function KartModel(props: JSX.IntrinsicElements['group']) {
       <mesh geometry={nodes.Cube080.geometry} material={materials['Black Plastic']} position={[0.03, 1.81, -0.48]} rotation={[1.83, 0, Math.PI]} scale={[0.36, 0.09, 0.34]} />
       <mesh geometry={nodes.Cube078.geometry} material={materials['Black Plastic']} position={[0.03, 1.78, 0.7]} rotation={[1.83, 0, Math.PI]} scale={[0.36, 0.29, 0.36]} />
       <mesh geometry={nodes.Cube076.geometry} material={materials['Matte Black']} position={[0.02, 0.13, -0.33]} rotation={[Math.PI, 0, Math.PI]} scale={[5.27, 3.09, 2.71]} />
-      <group position={[0.03, 1.92, 1.36]} rotation={[1.34, 0, 0]} scale={[0.37, 0.35, 0.35]}>
+      {/* <group name="seat-rest-3" position={[0.03, 1.92, 1.36]} rotation={[1.34, 0, 0]} scale={[0.37, 0.35, 0.35]}>
         <mesh geometry={nodes.Cube074_1.geometry} material={materials['Material.023']} />
         <mesh geometry={nodes.Cube074_2.geometry} material={materials['Material.014']} />
-      </group>
+      </group> */}
       <mesh geometry={nodes.Cube072.geometry} material={materials['Black Plastic']} position={[0.03, 1.9, 1.35]} rotation={[1.34, 0, 0]} scale={[0.36, 0.35, 0.38]} />
       <group position={[0.03, 1.54, 1.77]} rotation={[Math.PI, 0, Math.PI]} scale={[0.35, 0.35, 0.38]}>
         <mesh geometry={nodes.Cube071_1.geometry} material={materials['Material.023']} />

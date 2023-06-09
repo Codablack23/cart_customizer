@@ -1,3 +1,6 @@
+import { FourSeaterCart } from "./components/models/4_Seater"
+import { FourSeaterOppositeCart } from "./components/models/4_Seater_Opposite"
+
 interface Attributes{
     id:string | null | number,
     feature_name:string | null | number,
@@ -12,6 +15,12 @@ interface AllFeature{
     roof:Attributes[],
 }
 
+
+export const cart = [
+  {id:1,cartName:"Four Seater Cart",Component:FourSeaterCart},
+  {id:2,cartName:"Four Seater Cart Opposite Each Other",Component:FourSeaterOppositeCart},
+  // {id:3,cartName:""},
+]
 export const allFeatures:AllFeature = {
     steering:[
     {id:1,feature_name:"Steering 1",model:"/models/steerings/Steering 1.glb",},

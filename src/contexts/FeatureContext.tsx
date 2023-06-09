@@ -1,5 +1,5 @@
 import { ReactNode, createContext, useEffect, useState } from "react";
-import { allFeatures } from "../constants";
+import { allFeatures,cart } from "../constants";
 
 interface Attributes{
    solar_panel:string | number | null ,
@@ -10,25 +10,29 @@ interface Attributes{
 }
 
 interface FeatureContextInterface{
+    activeCart:string,
     attributes:Attributes
     actions?:{
         changeAttributes:(attributes:Attributes)=>void
+        selectCart:(cart:string)=>void
     }
 }
 interface FeatureProps{
     children:ReactNode | ReactNode[]
 }
 export const FeatureContext = createContext<FeatureContextInterface>({
+    activeCart:"",
     attributes:{
-        solar_panel:allFeatures["solar_panel"][0].model,
-        steering:allFeatures["steering"][0].model,
-        roof:allFeatures["roof"][0].model,
-        rims:allFeatures["rims"][0].model,
-        basket:allFeatures["basket"][0].model,  
+        solar_panel:"",
+        steering:"",
+        roof:"",
+        rims:"",
+        basket:"",  
     },
 })
 
 export default function FeaturesContextProvider({children}:FeatureProps){
+    const [activeCart,setActiveCart] = useState(cart[0].cartName)
    const [attributes,setAttributes] = useState<Attributes>({
     solar_panel:allFeatures["solar_panel"][0].feature_name,
     steering:allFeatures["steering"][0].feature_name,
@@ -42,10 +46,14 @@ useEffect(()=>{
 },[attributes])
 
    return <FeatureContext.Provider  value={{
+    activeCart,
     attributes,
     actions:{
         changeAttributes(attributes) {
             setAttributes(attributes)
+        }, 
+        selectCart(cart) {
+            setActiveCart(cart)
         },
     }
    }}>

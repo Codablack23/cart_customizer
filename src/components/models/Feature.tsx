@@ -53,23 +53,18 @@ const Steering=({name}:FeatureProps)=>{
 const Rims=({name}:FeatureProps)=>{
 
   const activeModel = rims.find((rim)=>rim.name.toLowerCase().trim() === (name as string).toLowerCase().trim() )
-  console.log(activeModel)
   return activeModel?activeModel.Component:null
 }
 const SolarPanel=({name}:FeatureProps)=>{
   const activeModel = solarPanel.find((panel)=>panel.name.toLowerCase().trim() === (name as string).toLowerCase().trim())
-  console.log(activeModel)
   return activeModel?activeModel.Component:null
 }
 const Basket=({name}:FeatureProps)=>{
   const activeModel = basket.find((item)=>item.name.toLowerCase().trim() === (name as string).toLowerCase().trim() )
-  console.log(activeModel)
-
   return activeModel?activeModel.Component:null
 }
 const Roof=({name}:FeatureProps)=>{
   const activeModel = roof.find((item)=>item.name.toLowerCase().trim() === (name as string).toLowerCase().trim() )
-  console.log(activeModel)
   return activeModel?activeModel.Component:null
 }
 export default function Features(){

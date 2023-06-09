@@ -4,3 +4,19 @@
 *{
   font-family: 'Manrope', sans-serif;
 }
+.select-model{
+  background-color: rgba(0,0,0,0.2);
+  backdrop-filter: blur(50px);
+  border-radius: 30px;
+}
+.modal{
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease 0.2s;
+}
+.modal .modal-dialogue{
+  min-height: 180px;
+  border-radius: 30px;
+}

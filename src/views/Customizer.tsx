@@ -5,6 +5,10 @@ import { Suspense, useContext, useEffect,} from "react"
 import { MeshReflectorMaterial, PresentationControls, Stage} from "@react-three/drei/web"
 import { FeatureContext } from "../contexts/FeatureContext"
 import {KartModel} from '../components/Kart.js'
+import { FourSeaterOppositeCart } from "../components/models/4_Seater_Opposite"
+import { FourSeaterCart } from "../components/models/4_Seater"
+import SelectModel from "../components/SelectModel"
+import { cart } from "../constants"
 
 const Loader = ()=>{
   return (
@@ -16,8 +20,14 @@ const Loader = ()=>{
   )
 }
 
+function ActiveCart({activeCart}:{activeCart:string}){
+  const selectedCart = cart.find((item=>item.cartName === activeCart))
+  const Component = selectedCart?selectedCart.Component({}):<></>
+  return Component
+}
+
 export default function CustomizerView(){
-  const {attributes} = useContext(FeatureContext)
+  const {attributes,activeCart} = useContext(FeatureContext)
    useEffect(()=>{
 
    },[attributes])   
@@ -25,6 +35,7 @@ export default function CustomizerView(){
         <div className="bg-gray-900 customizer-container md:h-screen overflow-y-auto">
           <div className="grid md:grid-cols-3">
             <div className="canvas-container relative top-0 h-80 md:h-screen p-5 md:col-span-2">
+              <SelectModel/>
               <div className="top-0 absolute left-0 w-full h-full">
               <Suspense fallback={<Loader/>}>
             <Canvas dpr={[1,2]}>
@@ -38,7 +49,11 @@ export default function CustomizerView(){
               >
              {/* <OrbitControls/> */}
                 <Stage adjustCamera environment={"city"} intensity={0.6} castShadow={false}>
-                  <KartModel/>
+                  <ActiveCart
+                  activeCart={activeCart}
+                  />
+                  {/* <KartModel/> */}
+                  {/* <FourSeaterCart/> */}
                 </Stage>  
                 <mesh position={[0,-1.7,0]} rotation={[-Math.PI / 2, 0,0]}>
                 <planeGeometry args={[170, 170]} />

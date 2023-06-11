@@ -41,8 +41,8 @@ function ActiveCart({activeCart}:{activeCart:string}){
 export default function CustomizerView(){
   const {attributes,activeCart} = useContext(FeatureContext)
   const floorTexture = useLoader(TextureLoader,"/textures/floor8.jpg")
-  const ceilingTexture = useLoader(TextureLoader,"/textures/wall3.png")
-  const wallTexture = useLoader(TextureLoader,"/textures/wall4.png")
+  const ceilingTexture = useLoader(TextureLoader,"/textures/wall3.jpg")
+  const wallTexture = useLoader(TextureLoader,"/textures/wall4.jpg")
    useEffect(()=>{
 
    },[attributes])   

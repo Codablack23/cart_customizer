@@ -266,7 +266,7 @@ export function FourSeaterCart(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF('/models/4_Seater.glb') as GLTFResult
   return (
     <group {...props} dispose={null}>
-      <group position={[0.017, 0.11, -3.001]} rotation={[Math.PI, 0, Math.PI]} scale={0.577}>
+      <group position={[0.0, 0.11, -3.001]} rotation={[Math.PI, 0, Math.PI]} scale={0.577}>
         <mesh geometry={nodes.Cube086.geometry} material={materials['Steel.002']} position={[-1.076, 1.936, -0.016]} rotation={[-0.245, 0, -0.033]} scale={[0.227, 0.227, 0.001]} />
         <mesh geometry={nodes.Cube087.geometry} material={materials['Steel.002']} position={[1.008, 1.896, -0.019]} rotation={[-0.286, 0, 1.087]} scale={[0.227, 0.227, 0.001]} />
         <mesh geometry={nodes.Cube090.geometry} material={materials['Dark Steel']} position={[0.003, 0.521, 0.002]} scale={[0.604, 0.044, 0.044]} />

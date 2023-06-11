@@ -259,7 +259,7 @@ export function FourSeaterOppositeCart(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF('/models/4_Seater_Opposite.glb') as GLTFResult
   return (
     <group {...props} dispose={null}>
-      <group position={[-1.251, 0.513, 1.425]} rotation={[0, 0, Math.PI / 2]} scale={[0.344, 0.08, 0.344]}>
+      <group position={[0, 0.513, 1.425]} rotation={[0, 0, Math.PI / 2]} scale={[0.344, 0.08, 0.344]}>
         <mesh geometry={nodes.Cylinder032.geometry} material={materials['Blue paint new']} />
         <mesh geometry={nodes.Cylinder032_1.geometry} material={materials['Black Metal Paint']} />
       </group>

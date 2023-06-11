@@ -1,4 +1,5 @@
 import { FourSeaterCart } from "./components/models/4_Seater"
+import { KartModel } from "./components/Kart"
 import { FourSeaterOppositeCart } from "./components/models/4_Seater_Opposite"
 
 interface Attributes{
@@ -19,6 +20,7 @@ interface AllFeature{
 export const cart = [
   {id:1,cartName:"Four Seater Cart",Component:FourSeaterCart},
   {id:2,cartName:"Four Seater Cart Opposite Each Other",Component:FourSeaterOppositeCart},
+  {id:2,cartName:"Six Seater Cart",Component:KartModel},
   // {id:3,cartName:""},
 ]
 export const allFeatures:AllFeature = {

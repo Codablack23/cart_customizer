@@ -63,9 +63,9 @@ export default function CustomizerView(){
               >
                 <Stars/> 
                 <Stage adjustCamera environment={"city"} intensity={0.6} castShadow={false}>
-<!--                   <ActiveCart
+                    {/**  <ActiveCart
                   activeCart={activeCart}
-                  /> -->
+                  />**/}
                   
                 </Stage> 
                 <Plane

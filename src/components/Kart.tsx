@@ -544,4 +544,4 @@ export function KartModel(props: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload('/kart.glb')
+useGLTF.preload('/models/kart.glb')

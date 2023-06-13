@@ -2,7 +2,7 @@ import { Canvas, useLoader, useThree,} from "@react-three/fiber"
 import "../styles/customizer.scss"
 import Customizer from "../components/Customizer"
 import { Suspense, useContext, useEffect,} from "react"
-import { MeshReflectorMaterial, PresentationControls, Stage,Box,Stars} from "@react-three/drei/web"
+import { Environment,PresentationControls, Stage,Box, useEnvironment, OrbitControls} from "@react-three/drei/web"
 import { FeatureContext } from "../contexts/FeatureContext"
 import SelectModel from "../components/SelectModel"
 import { cart } from "../constants"
@@ -39,13 +39,8 @@ function ActiveCart({activeCart}:{activeCart:string}){
 }
 
 export default function CustomizerView(){
-  const {attributes,activeCart} = useContext(FeatureContext)
-  const floorTexture = useLoader(TextureLoader,"/textures/floor8.jpg")
-  const ceilingTexture = useLoader(TextureLoader,"/textures/wall3.jpg")
-  const wallTexture = useLoader(TextureLoader,"/textures/wall4.jpg")
-   useEffect(()=>{
-
-   },[attributes])   
+  const {attributes,activeCart} = useContext(FeatureContext) 
+   const envMap = useEnvironment({files:"/environment/garage.hdr"})
     return (
         <div className="bg-gray-900 customizer-container md:h-screen overflow-y-auto">
           <div className="grid md:grid-cols-3">
@@ -54,56 +49,33 @@ export default function CustomizerView(){
               <div className="top-0 absolute left-0 w-full h-full">
               <Suspense fallback={<Loader/>}>
             <Canvas dpr={[1,2]}>   
-                 
             <PresentationControls
                 speed={1.5}
                 global
                 // polar={[-0.1, Math.PI / 4]}
                 rotation={[Math.PI / 8, Math.PI / 4, 0]}
               >
-                <Stars/> 
-                <Stage adjustCamera environment={"city"} intensity={0.6} castShadow={false}>
-                  <ActiveCart
+               
+              
+                <Environment map={envMap}
+                background
+                 />
+                <Stage adjustCamera intensity={0.6} castShadow={false}>
+                <OrbitControls/>
+                    {/* <OrbitControls 
+                    enableZoom={false}
+                    enablePan={false}
+                    /> */}
+                  {/* <ActiveCart
                   activeCart={activeCart}
-                  />
+                  /> */}
                   
                 </Stage> 
-                <Plane
-                  name="front-view"
-                  args={[20, 40, 0]}
-                  position={[0, 0, -18]}
-                  texture={wallTexture}
-                />  
-               
-                <Plane
-                   name="back-view" 
-                   args={[20, 40, 0]} 
-                  position={[0, 0, 18]}
-                  texture={wallTexture}
-                />   
-                <Plane
-                  name="left-side-view" args={[0 ,10, 0.5]} position={[-10, 0, 0]}
-                />  
-               
-                <Plane
-                  name="left-side-view" args={[0.5 ,10, 0]} position={[-10, 0, -10]}
-                /> 
-                <Plane
-                  name="left-side-view" args={[0.5 ,10, 0]} position={[-10, 0, 10]}
-                />   
-                <Plane
-                 name="right-side-view" args={[0 ,40, 40]} position={[10, 0, 0]}
-                  texture={wallTexture}
-                />     
-                <Plane
-                  name={"top-view"} args={[20, 0, 40]} position={[0, 4.5, 0]}
-                  texture={ceilingTexture}
-                />   
-             
-                <mesh position={[0,-1.7,0]} rotation={[-Math.PI / 2, 0,0]}>
+           
+                {/* <mesh position={[0,-10,0]} rotation={[-Math.PI / 2, 0,0]}>
                   <planeGeometry args={[20, 40]} />
                   <meshStandardMaterial map={floorTexture}/>
-                </mesh>  
+                </mesh>   */}
             
             </PresentationControls>  
             </Canvas>

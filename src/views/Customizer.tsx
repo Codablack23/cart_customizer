@@ -6,7 +6,7 @@ import { Environment,PresentationControls, Stage,Box, useEnvironment, OrbitContr
 import { FeatureContext } from "../contexts/FeatureContext"
 import SelectModel from "../components/SelectModel"
 import { cart } from "../constants"
-import { Texture, TextureLoader } from "three"
+import { Texture, } from "three"
 
 interface PlaneProps{
     texture?:Texture,
@@ -60,12 +60,17 @@ export default function CustomizerView(){
                 rotation={[Math.PI / 8, Math.PI / 4, 0]}
               > */}
             
-                <Stage adjustCamera intensity={0.6} castShadow={false}>
+                <Stage 
+                  environment={{files:"/environment/garage.hdr"}}
+                  adjustCamera  
+                  intensity={0.6} 
+                  castShadow={false}
+                >
                   <OrbitControls/>
-                  {/* <ActiveCart
+                  <ActiveCart
 
                   activeCart={activeCart}
-                  /> */}
+                  />
                   
                 </Stage> 
            

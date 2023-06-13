@@ -7,7 +7,7 @@ import * as THREE from 'three'
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
-import Features from './Feature'
+import Features, { Feature4 } from './Feature'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -259,11 +259,12 @@ export function FourSeaterOppositeCart(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF('/models/4_Seater_Opposite.glb') as GLTFResult
   return (
     <group {...props} dispose={null}>
+      <Feature4/>
       <group position={[0, 0.513, 1.425]} rotation={[0, 0, Math.PI / 2]} scale={[0.344, 0.08, 0.344]}>
         <mesh geometry={nodes.Cylinder032.geometry} material={materials['Blue paint new']} />
         <mesh geometry={nodes.Cylinder032_1.geometry} material={materials['Black Metal Paint']} />
       </group>
-      <Features/>
+      
       <mesh geometry={nodes.Circle.geometry} material={materials['0black']} position={[0, 2.108, 0.034]} scale={0.137} />
       <mesh geometry={nodes.Cube011.geometry} material={materials['0black']} position={[0, 1.216, 0]} />
       <mesh geometry={nodes['WhatsApp_Image_2023-05-06_at_95846_AM_copy'].geometry} material={materials['WhatsApp Image 2023-05-06 at 9.58.46 AM copy']} position={[-0.892, 1.757, 0.033]} rotation={[-Math.PI, 0, Math.PI / 2]} scale={0.226} />
@@ -464,9 +465,9 @@ export function FourSeaterOppositeCart(props: JSX.IntrinsicElements['group']) {
       <mesh geometry={nodes.Cylinder041.geometry} material={materials['Dark Steel']} position={[0.017, 1.432, -2.972]} rotation={[Math.PI, 0, Math.PI / 2]} scale={[0.025, 0.318, 0.025]} />
       <mesh geometry={nodes.Cylinder043.geometry} material={materials['Rough Iron Steel']} position={[0.017, 0.121, -1.578]} rotation={[Math.PI, 0, Math.PI]} scale={[3.099, 1.68, 1.68]} />
       <mesh geometry={nodes.Plane020.geometry} material={materials['Steel.002']} position={[0.025, 1.277, -2.993]} rotation={[Math.PI / 2, 0, Math.PI]} scale={[0.518, 0.577, 0.008]} />
-      <mesh geometry={nodes.Plane022.geometry} material={materials['Rough Iron Steel']} position={[0.017, 0.625, -2.979]} rotation={[Math.PI, 0, Math.PI]} scale={[0.355, 0.577, 0.062]}>
+      {/* <mesh geometry={nodes.Plane022.geometry} material={materials['Rough Iron Steel']} position={[0.017, 0.625, -2.979]} rotation={[Math.PI, 0, Math.PI]} scale={[0.355, 0.577, 0.062]}>
         <mesh geometry={nodes.Plane021_1.geometry} material={materials['Material.009']} position={[-0.084, 0.682, 1.198]} rotation={[2.071, 0, 0]} scale={[0.373, 1.845, 0.092]} />
-      </mesh>
+      </mesh> */}
       <mesh geometry={nodes.Plane023.geometry} material={materials['Dark Steel']} position={[0.017, 0.398, -2.953]} rotation={[Math.PI, 0, Math.PI]} scale={[0.24, 0.572, 0.051]} />
     </group>
   )

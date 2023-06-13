@@ -7,7 +7,7 @@ import * as THREE from 'three'
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
-import Features from './Feature'
+import { Feature4 } from './Feature'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -274,12 +274,12 @@ export function FourSeaterCart(props: JSX.IntrinsicElements['group']) {
         <mesh geometry={nodes.Cylinder041.geometry} material={materials['Dark Steel']} position={[0, 2.291, -0.049]} rotation={[0, 0, -Math.PI / 2]} scale={[0.043, 0.552, 0.043]} />
         <mesh geometry={nodes.Cylinder043.geometry} material={materials['Rough Iron Steel']} position={[0, 0.019, -2.467]} scale={[5.37, 2.912, 2.912]} />
         <mesh geometry={nodes.Plane020.geometry} material={materials['Steel.002']} position={[-0.015, 2.024, -0.014]} rotation={[Math.PI / 2, 0, 0]} scale={[0.898, 1, 0.014]} />
-        <mesh geometry={nodes.Plane022.geometry} material={materials['Rough Iron Steel']} position={[0, 0.893, -0.038]} scale={[0.616, 1, 0.107]}>
+        {/* <mesh geometry={nodes.Plane022.geometry} material={materials['Rough Iron Steel']} position={[0, 0.893, -0.038]} scale={[0.616, 1, 0.107]}>
           <mesh geometry={nodes.Plane021_1.geometry} material={materials['Material.009']} position={[-0.084, 0.682, 1.198]} rotation={[2.071, 0, 0]} scale={[0.373, 1.845, 0.092]} />
-        </mesh>
+        </mesh> */}
         <mesh geometry={nodes.Plane023.geometry} material={materials['Dark Steel']} position={[0, 0.499, -0.083]} scale={[0.415, 0.991, 0.089]} />
       </group>
-      <Features/>
+      <Feature4/>
       <group position={[-0.339, 1.463, -2.855]} scale={8.887}>
         <mesh geometry={nodes.Cylinder010.geometry} material={nodes.Cylinder010.material} position={[0.52, -0.02, 0.483]} scale={0.113} />
         <mesh geometry={nodes.Cylinder016.geometry} material={nodes.Cylinder016.material} position={[-0.442, -0.02, 0.483]} rotation={[-Math.PI, 0, 0]} scale={-0.113} />

@@ -8,7 +8,7 @@ import { FeatureContext } from "../contexts/FeatureContext"
 import SelectModel, { SelectEnvironemt } from "../components/SelectModel"
 import { cart } from "../constants"
 import { Texture, } from "three"
-import { KartModel } from "../components/Kart"
+import { Model } from "../components/models/Kart6"
 
 interface PlaneProps{
     texture?:Texture,
@@ -69,7 +69,7 @@ export default function CustomizerView(){
                     adjustCamera  
                     
                     intensity={0.6} 
-                    castShadow={false}
+                    castShadow={true}
                   >
                   {/* <OrbitControls/> */}
                   {/* <ActiveCart
@@ -77,6 +77,7 @@ export default function CustomizerView(){
                   activeCart={activeCart}
                   /> */}
                   {/* <KartModel/> */}
+                  <Model/>
                   <GarageModel
                   scale={[500,500,500]}
                   />

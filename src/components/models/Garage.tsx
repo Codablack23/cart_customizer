@@ -27,7 +27,7 @@ export function GarageModel(props: JSX.IntrinsicElements['group']) {
   return (
     <group {...props} dispose={null}>
       <mesh  scale={[10,10,10]} geometry={nodes.Object_2.geometry} material={materials.material} rotation={[-Math.PI / 2, 0, 0]} />
-      <Model/>
+      // <Model/>
     </group>
   )
 }

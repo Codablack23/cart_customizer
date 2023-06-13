@@ -49,24 +49,21 @@ export default function CustomizerView(){
               <div className="top-0 absolute left-0 w-full h-full">
               <Suspense fallback={<Loader/>}>
             <Canvas dpr={[1,2]}>   
-            <PresentationControls
+            <Environment
+            map={envMap}
+            background
+            />
+            {/* <PresentationControls
                 speed={1.5}
                 global
                 // polar={[-0.1, Math.PI / 4]}
                 rotation={[Math.PI / 8, Math.PI / 4, 0]}
-              >
-               
-              
-                <Environment map={envMap}
-                background
-                 />
+              > */}
+            
                 <Stage adjustCamera intensity={0.6} castShadow={false}>
-                <OrbitControls/>
-                    {/* <OrbitControls 
-                    enableZoom={false}
-                    enablePan={false}
-                    /> */}
+                  <OrbitControls/>
                   {/* <ActiveCart
+
                   activeCart={activeCart}
                   /> */}
                   
@@ -77,7 +74,7 @@ export default function CustomizerView(){
                   <meshStandardMaterial map={floorTexture}/>
                 </mesh>   */}
             
-            </PresentationControls>  
+            {/* </PresentationControls>   */}
             </Canvas>
             </Suspense>
               </div>

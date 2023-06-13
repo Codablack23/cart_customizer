@@ -23,6 +23,16 @@ export const cart = [
   {id:2,cartName:"Six Seater Cart",Component:Model},
   // {id:3,cartName:""},
 ]
+export const environments = [
+  {
+    name:"Paul Lobe Haus",
+    src:"/environment/garage.hdr"
+  },
+  {
+    name:"Solitude",
+    src:"/environment/solitude.hdr"
+  }
+]
 export const allFeatures:AllFeature = {
     steering:[
     {id:1,feature_name:"Steering 1",model:"/models/steerings/Steering 1.glb",},

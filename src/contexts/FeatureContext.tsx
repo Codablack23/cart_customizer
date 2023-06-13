@@ -11,10 +11,15 @@ interface Attributes{
 
 interface FeatureContextInterface{
     activeCart:string,
-    attributes:Attributes
+    attributes:Attributes,
+    environment:{
+        name:string,
+        src:string
+    },
     actions?:{
         changeAttributes:(attributes:Attributes)=>void
         selectCart:(cart:string)=>void
+        selectEnvr:(env:{name:string,src:string})=>void
     }
 }
 interface FeatureProps{
@@ -22,6 +27,10 @@ interface FeatureProps{
 }
 export const FeatureContext = createContext<FeatureContextInterface>({
     activeCart:"",
+    environment:{
+        name:"Paul Lobe Haus",
+        src:"/environment/garage.hdr"
+    },
     attributes:{
         solar_panel:"",
         steering:"",
@@ -33,6 +42,10 @@ export const FeatureContext = createContext<FeatureContextInterface>({
 
 export default function FeaturesContextProvider({children}:FeatureProps){
     const [activeCart,setActiveCart] = useState(cart[0].cartName)
+    const [environment,setEnv] = useState({
+        name:"Paul Lobe Haus",
+        src:"/environment/garage.hdr"
+    })
    const [attributes,setAttributes] = useState<Attributes>({
     solar_panel:allFeatures["solar_panel"][0].feature_name,
     steering:allFeatures["steering"][0].feature_name,
@@ -47,6 +60,7 @@ useEffect(()=>{
 
    return <FeatureContext.Provider  value={{
     activeCart,
+    environment,
     attributes,
     actions:{
         changeAttributes(attributes) {
@@ -54,6 +68,9 @@ useEffect(()=>{
         }, 
         selectCart(cart) {
             setActiveCart(cart)
+        },
+        selectEnvr(env) {
+            setEnv(env)
         },
     }
    }}>

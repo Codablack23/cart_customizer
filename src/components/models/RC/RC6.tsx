@@ -21,9 +21,9 @@ type ActionName = 'ROOF'
 type GLTFActions = Record<ActionName, THREE.AnimationAction>
 
 export function Model(props: JSX.IntrinsicElements['group']) {
-  const group = useRef<THREE.Group>()
+  const group = useRef<any>()
   const { nodes, materials, animations } = useGLTF('/RC6.glb') as GLTFResult
-  const { actions } = useAnimations<GLTFActions>(animations, group)
+  const { actions } = useAnimations<any>(animations, group)
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">

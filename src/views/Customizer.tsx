@@ -1,10 +1,10 @@
 import { Canvas, useLoader, useThree,} from "@react-three/fiber"
 import "../styles/customizer.scss"
 import Customizer from "../components/Customizer"
-import { Suspense, useContext, useEffect,} from "react"
+import { Suspense, useContext, useEffect,useState} from "react"
 import { Environment,PresentationControls, Stage,Box, useEnvironment, OrbitControls} from "@react-three/drei/web"
 import { FeatureContext } from "../contexts/FeatureContext"
-import SelectModel from "../components/SelectModel"
+import SelectModel, { SelectEnvironemt } from "../components/SelectModel"
 import { cart } from "../constants"
 import { Texture, } from "three"
 
@@ -39,30 +39,33 @@ function ActiveCart({activeCart}:{activeCart:string}){
 }
 
 export default function CustomizerView(){
-  const {attributes,activeCart} = useContext(FeatureContext) 
-   const envMap = useEnvironment({files:"/environment/garage.hdr"})
+  const [env,setEnv] = useState("/environment/garage.hdr")
+   const {environment,activeCart} = useContext(FeatureContext) 
+  //  const envMap = useEnvironment({files:environment.src?environment.src:"/environment/garage.hdr"})
+
+   useEffect(()=>{
+     setEnv(environment.src)
+   },[environment])
     return (
         <div className="bg-gray-900 customizer-container md:h-screen overflow-y-auto">
           <div className="grid md:grid-cols-3">
             <div className="canvas-container relative top-0 h-80 md:h-screen p-5 md:col-span-2">
               <SelectModel/>
+              <SelectEnvironemt/>
               <div className="top-0 absolute left-0 w-full h-full">
               <Suspense fallback={<Loader/>}>
             <Canvas dpr={[1,2]}>   
-            <Environment
-            map={envMap}
-            background
-            />
             {/* <PresentationControls
                 speed={1.5}
                 global
                 // polar={[-0.1, Math.PI / 4]}
                 rotation={[Math.PI / 8, Math.PI / 4, 0]}
               > */}
-            
+               
                 <Stage 
-                  environment={{files:"/environment/garage.hdr"}}
+                  environment={{files:env?env:"/environment/garage.hdr",background:true}}
                   adjustCamera  
+                  
                   intensity={0.6} 
                   castShadow={false}
                 >

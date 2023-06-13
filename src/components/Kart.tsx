@@ -536,9 +536,9 @@ export function KartModel(props: JSX.IntrinsicElements['group']) {
       <mesh geometry={nodes.Cylinder041.geometry} material={materials['Dark Steel']} position={[0.02, 1.43, -2.97]} rotation={[Math.PI, 0, Math.PI / 2]} scale={[0.02, 0.32, 0.02]} />
       <mesh geometry={nodes.Cylinder043.geometry} material={materials['Rough Iron Steel']} position={[0.02, 0.12, -1.58]} rotation={[Math.PI, 0, Math.PI]} scale={[3.1, 1.68, 1.68]} />
       <mesh geometry={nodes.Plane020.geometry} material={materials['Steel.002']} position={[0.03, 1.28, -2.99]} rotation={[Math.PI / 2, 0, Math.PI]} scale={[0.52, 0.58, 0.01]} />
-      <mesh geometry={nodes.Plane022.geometry} material={materials['Rough Iron Steel']} position={[0.02, 0.63, -2.98]} rotation={[Math.PI, 0, Math.PI]} scale={[0.36, 0.58, 0.06]}>
+      {/* <mesh geometry={nodes.Plane022.geometry} material={materials['Rough Iron Steel']} position={[0.02, 0.63, -2.98]} rotation={[Math.PI, 0, Math.PI]} scale={[0.36, 0.58, 0.06]}>
         <mesh geometry={nodes.Plane021_1.geometry} material={materials['Material.009']} position={[-0.08, 0.68, 1.2]} rotation={[2.07, 0, 0]} scale={[0.37, 1.85, 0.09]} />
-      </mesh>
+      </mesh> */}
       <mesh geometry={nodes.Plane023.geometry} material={materials['Dark Steel']} position={[0.02, 0.4, -2.95]} rotation={[Math.PI, 0, Math.PI]} scale={[0.24, 0.57, 0.05]} />
     </group>
   )

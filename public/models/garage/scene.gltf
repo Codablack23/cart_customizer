@@ -96,13 +96,13 @@
   ],
   "images": [
     {
-      "uri": "textures/material_baseColor.jpeg"
+      "uri": "./textures/material_baseColor.jpeg"
     },
     {
-      "uri": "textures/material_metallicRoughness.png"
+      "uri": "./textures/material_metallicRoughness.png"
     },
     {
-      "uri": "textures/material_emissive.jpeg"
+      "uri": "./textures/material_emissive.jpeg"
     }
   ],
   "materials": [

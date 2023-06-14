@@ -1,7 +1,7 @@
 import { Canvas, useLoader, useThree,} from "@react-three/fiber"
 import "../styles/customizer.scss"
 import Customizer from "../components/Customizer"
-import {GarageModel} from "../components/models/Garage"
+// import {GarageModel} from "../components/models/Garage"
 import { Suspense, useContext, useEffect,useState} from "react"
 import { Environment,PresentationControls, Stage,Box, useEnvironment, OrbitControls} from "@react-three/drei/web"
 import { FeatureContext } from "../contexts/FeatureContext"
@@ -9,12 +9,19 @@ import SelectModel, { SelectEnvironemt } from "../components/SelectModel"
 import { cart } from "../constants"
 import { Texture, } from "three"
 import { Model } from "../components/models/Kart6"
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 
 interface PlaneProps{
     texture?:Texture,
     position:[x:number,y:number,z:number],
     args:[x:number,y:number,z:number]
     name:string,
+}
+
+function GarageScene(){
+  const {scene} = useLoader(GLTFLoader,"/models/scene.glb")
+  scene.scale.set(10,10,10)
+  return <primitive object={scene}/>
 }
 
 function Plane({texture,position,args,name}:PlaneProps){
@@ -63,7 +70,7 @@ export default function CustomizerView(){
               polar={[-0.1, Math.PI / 4]}
               rotation={[Math.PI / 8, Math.PI / 4, 0]}
               >
-               
+               <GarageScene/>
                   <Stage 
                     environment={{files:env?env:"/environment/garage.hdr"}}
                     adjustCamera  
@@ -72,15 +79,14 @@ export default function CustomizerView(){
                     castShadow={true}
                   >
                   {/* <OrbitControls/> */}
-                  {/* <ActiveCart
-
+                  <ActiveCart
                   activeCart={activeCart}
-                  /> */}
-                  {/* <KartModel/> */}
-                  <Model/>
-                  <GarageModel
-                  scale={[500,500,500]}
                   />
+                  {/* <KartModel/> */}
+                  {/* <Model/> */}
+                  {/* <GarageModel
+                  scale={[500,500,500]}
+                  /> */}
                   
                 </Stage> 
            

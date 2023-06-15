@@ -20,7 +20,7 @@ interface PlaneProps{
 
 function GarageScene(){
   const {scene} = useLoader(GLTFLoader,"/models/scene.glb")
-  scene.scale.set(10,10,10)
+  scene.scale.set(7,7,7)
   return <primitive object={scene}/>
 }
 
@@ -66,22 +66,23 @@ export default function CustomizerView(){
               <Canvas dpr={[1,2]}>   
               <PresentationControls
               speed={1.5}
+              zoom={1}
               global
-              polar={[-0.1, Math.PI / 4]}
+              polar={[-0.1, Math.PI / 3]}
               rotation={[Math.PI / 8, Math.PI / 4, 0]}
               >
                <GarageScene/>
                   <Stage 
-                    environment={{files:env?env:"/environment/garage.hdr"}}
+                    environment={{files:env}}
                     adjustCamera  
                     
                     intensity={0.6} 
                     castShadow={true}
                   >
                   {/* <OrbitControls/> */}
-                  <ActiveCart
+                  {/* <ActiveCart
                   activeCart={activeCart}
-                  />
+                  /> */}
                   {/* <KartModel/> */}
                   {/* <Model/> */}
                   {/* <GarageModel

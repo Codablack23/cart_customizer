@@ -2,13 +2,13 @@ import { Canvas, useLoader, useThree,} from "@react-three/fiber"
 import "../styles/customizer.scss"
 import Customizer from "../components/Customizer"
 // import {GarageModel} from "../components/models/Garage"
-import { Suspense, useContext, useEffect,useState} from "react"
-import { Environment,PresentationControls, Stage,Box, useEnvironment, OrbitControls} from "@react-three/drei/web"
+import { Suspense, useContext,useState} from "react"
+import {PresentationControls, Stage,Box, OrbitControls} from "@react-three/drei/web"
 import { FeatureContext } from "../contexts/FeatureContext"
-import SelectModel, { SelectEnvironemt } from "../components/SelectModel"
+import SelectModel from "../components/SelectModel"
 import { cart } from "../constants"
 import { Texture, } from "three"
-import { Model } from "../components/models/Kart6"
+// import { Model } from "../components/models/Kart6"
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 
 interface PlaneProps{
@@ -20,7 +20,8 @@ interface PlaneProps{
 
 function GarageScene(){
   const {scene} = useLoader(GLTFLoader,"/models/scene.glb")
-  scene.scale.set(7,7,7)
+  scene.scale.set(6,6,6)
+  scene.position.set(0,-1.5,0)
   return <primitive object={scene}/>
 }
 
@@ -64,12 +65,20 @@ export default function CustomizerView(){
               <div className="top-0 absolute left-0 w-full h-full">
               <Suspense fallback={<Loader/>}>
               <Canvas dpr={[1,2]}>   
+              <OrbitControls
+                  minDistance={4}
+                  minZoom={0.002}
+                  maxDistance={6}
+                  maxZoom={0.007}
+                  enableRotate={false}
+                  />
               <PresentationControls
               speed={1.5}
-              zoom={1}
+              // zoom={1}
               global
               polar={[-0.1, Math.PI / 3]}
-              rotation={[Math.PI / 8, Math.PI / 4, 0]}
+              // rotation={[Math.PI / 8,  0]}
+              rotation={[Math.PI / 8,Math.PI / 4, 0]}
               >
                <GarageScene/>
                   <Stage 
@@ -79,10 +88,10 @@ export default function CustomizerView(){
                     intensity={0.6} 
                     castShadow={true}
                   >
-                  {/* <OrbitControls/> */}
-                  {/* <ActiveCart
+                
+                  <ActiveCart
                   activeCart={activeCart}
-                  /> */}
+                  />
                   {/* <KartModel/> */}
                   {/* <Model/> */}
                   {/* <GarageModel

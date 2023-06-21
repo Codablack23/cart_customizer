@@ -20,6 +20,8 @@ import { SteeringModel3 } from "./Steerings/Steering3"
 import { SteeringModel4 } from "./Steerings/Steering4"
 import { SteeringModel5 } from "./Steerings/Steering5"
 import { FeatureContext } from "../../contexts/FeatureContext"
+import { Rim1, Rim10, Rim2, Rim3, Rim4, Rim5, Rim6, Rim7, Rim8, Rim9 } from "./Rims/FSRims"
+
 
 const rims = [
     {name:"Rim 1",Component:<RimModel1/>},
@@ -33,6 +35,18 @@ const rims = [
     {name:"Rim 9",Component:<RimModel9/>},
     {name:"Rim 10",Component:<RimModel10/>}
   ] 
+const fsrims = [
+    {name:"Rim 1",Component:<Rim1/>},
+    {name:"Rim 2",Component:<Rim2/>},
+    {name:"Rim 3",Component:<Rim3/>},
+    {name:"Rim 4",Component:<Rim4/>},
+    {name:"Rim 5",Component:<Rim5/>},
+    {name:"Rim 6",Component:<Rim6/>},
+    {name:"Rim 7",Component:<Rim7/>},
+    {name:"Rim 8",Component:<Rim8/>},
+    {name:"Rim 9",Component:<Rim9/>},
+    {name:"Rim 10",Component:<Rim10/>}
+  ] 
 const wheels = []
 const solarPanel = [{name:"Solar Panel", Component:<SolarPanelModel/>}]
 const solarPanel4 = [{name:"Solar Panel", Component:<SolarPanelModel40/>}]
@@ -44,7 +58,7 @@ const steerings = [
     {name:"Steering 2",Component:<SteeringModel2/>},
     {name:"Steering 3",Component:<SteeringModel3/>},
     {name:"Steering 4",Component:<SteeringModel4/>},
-    {name:"Steering 5",Component:<SteeringModel5/>},
+    // {name:"Steering 5",Component:<SteeringModel5/>},
 ]
 
 interface FeatureProps{
@@ -57,6 +71,11 @@ const Steering=({name}:FeatureProps)=>{
 const Rims=({name}:FeatureProps)=>{
 
   const activeModel = rims.find((rim)=>rim.name.toLowerCase().trim() === (name as string).toLowerCase().trim() )
+  return activeModel?activeModel.Component:null
+}
+const FSRims=({name}:FeatureProps)=>{
+
+  const activeModel = fsrims.find((rim)=>rim.name.toLowerCase().trim() === (name as string).toLowerCase().trim() )
   return activeModel?activeModel.Component:null
 }
 const SolarPanel=({name}:FeatureProps)=>{
@@ -112,6 +131,28 @@ export  function Feature4(){
      name={attributes.steering}
      /> 
      <Rims
+     name={attributes.rims}
+     />   
+     <SolarPanel4
+     name={attributes.solar_panel}
+     />  
+     <Roof4
+     name={attributes.roof}
+     />
+    </>
+  )
+}
+export function FeatureFS(){
+  const {attributes} = useContext(FeatureContext)
+  return (
+    <>
+     <Basket
+     name={attributes.basket}
+     />  
+     <Steering
+     name={attributes.steering}
+     /> 
+     <FSRims
      name={attributes.rims}
      />   
      <SolarPanel4

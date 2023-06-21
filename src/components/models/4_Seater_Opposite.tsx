@@ -7,7 +7,7 @@ import * as THREE from 'three'
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
-import Features, { Feature4 } from './Feature'
+import Features, { Feature4, FeatureFS } from './Feature'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -259,7 +259,7 @@ export function FourSeaterOppositeCart(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF('/models/4_Seater_Opposite.glb') as GLTFResult
   return (
     <group {...props} dispose={null}>
-      <Feature4/>
+      <FeatureFS/>
       <group position={[0, 0.513, 1.425]} rotation={[0, 0, Math.PI / 2]} scale={[0.344, 0.08, 0.344]}>
         <mesh geometry={nodes.Cylinder032.geometry} material={materials['Blue paint new']} />
         <mesh geometry={nodes.Cylinder032_1.geometry} material={materials['Black Metal Paint']} />

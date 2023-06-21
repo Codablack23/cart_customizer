@@ -39,7 +39,7 @@ export const allFeatures:AllFeature = {
     {id:2,feature_name:"Steering 2",model:"/models/steerings/Steering 2.glb",},
     {id:3,feature_name:"Steering 3",model:"/models/steerings/Steering 3.glb",},
     {id:4,feature_name:"Steering 4",model:"/models/steerings/Steering 4.glb",},
-    {id:5,feature_name:"Steering 5",model:"/models/steerings/Steering 5.glb",},
+    // {id:5,feature_name:"Steering 5",model:"/models/steerings/Steering 5.glb",},
     ],  
     rims:[
     {id:1,feature_name:"Rim 1",model:"/models/rims/Rim 1.glb",},

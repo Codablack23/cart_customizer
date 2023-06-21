@@ -67,7 +67,7 @@ export default function CustomizerView(){
               <OrbitControls
                   minDistance={4}
                   minZoom={0.002}
-                  maxDistance={6}
+                  maxDistance={8}
                   maxZoom={0.007}
                   enableRotate={false}
                   />
@@ -78,13 +78,13 @@ export default function CustomizerView(){
               rotation={[Math.PI / 8,Math.PI / 4, 0]}
               >
                {/* <GarageScene/> */}
-                  <Stage 
+                  {/* <Stage 
                     environment={{files:env}}
                     adjustCamera  
                     
-                    intensity={0.6} 
+                    intensity={0} 
                     castShadow={true}
-                  >
+                  > */}
                 
                   <ActiveCart
                   activeCart={activeCart}
@@ -95,7 +95,7 @@ export default function CustomizerView(){
                   scale={[500,500,500]}
                   /> */}
                   
-                </Stage> 
+                {/* </Stage>  */}
            
            
             

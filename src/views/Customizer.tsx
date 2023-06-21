@@ -10,6 +10,7 @@ import { cart } from "../constants"
 import { Texture, } from "three"
 // import { Model } from "../components/models/Kart6"
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
+import { FourSeaterModel2 } from "../components/models/Kart_Four_Seater2"
 
 interface PlaneProps{
     texture?:Texture,
@@ -63,10 +64,8 @@ export default function CustomizerView(){
               <SelectModel/>
               <div className="top-0 absolute left-0 w-full h-full">
               <Suspense fallback={<Loader/>}>
-              <Canvas dpr={[1,2]}>   
-              
-              <ambientLight  color="#000"   intensity={-10}/>
-              {/* <spotLight intensity={0.5} angle={0.1} penumbra={1} position={[10, 15, 10]} castShadow /> */}
+              <Canvas>   
+{/*
               <OrbitControls
                   minDistance={4}
                   minZoom={0.002}
@@ -87,29 +86,17 @@ export default function CustomizerView(){
             attenuation={5}
             anglePower={5} // Diffuse-cone anglePower (default: 5)
             />
-               {/* <GarageScene/> */}
-                  {/* <Stage 
-                    environment={{files:env}}
-                    adjustCamera  
-                    
-                    intensity={-10} 
-                    castShadow={true}
-                  > */}
+           
                 
                   <ActiveCart
                   activeCart={activeCart}
                   />
-                  {/* <KartModel/> */}
-                  {/* <Model/> */}
-                  {/* <GarageModel
-                  scale={[500,500,500]}
-                  /> */}
-                  
-                {/* </Stage>  */}
+               
            
            
             
-            </PresentationControls>  
+            </PresentationControls>   */}
+            <FourSeaterModel2/>
             </Canvas>
             </Suspense>
               </div>

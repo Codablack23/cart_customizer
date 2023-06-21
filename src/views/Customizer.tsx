@@ -12,6 +12,7 @@ import { Texture, } from "three"
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import { FourSeaterModel2 } from "../components/models/Kart_Four_Seater2"
 import { KartFourSeaterModel } from "../components/models/Kart_Four_Seater"
+import Lighting from "./Light"
 
 interface PlaneProps{
     texture?:Texture,
@@ -53,11 +54,6 @@ function ActiveCart({activeCart}:{activeCart:string}){
 export default function CustomizerView(){
   const [env,setEnv] = useState("/environment/garage.hdr")
    const {environment,activeCart} = useContext(FeatureContext) 
-  //  const envMap = useEnvironment({files:environment.src?environment.src:"/environment/garage.hdr"})
-
-  //  useEffect(()=>{
-  //    setEnv(environment.src)
-  //  },[environment])
     return (
         <div className="bg-gray-900 customizer-container md:h-screen overflow-y-auto">
           <div className="grid md:grid-cols-3">
@@ -67,14 +63,7 @@ export default function CustomizerView(){
               <Suspense fallback={<Loader/>}>
               <Canvas frameloop="demand"> 
               <ambientLight intensity={2}/>
-              <OrbitControls
-                  minDistance={4}
-                  minZoom={0.002}
-                  maxDistance={8}
-                  maxZoom={0.007}
-                  enableRotate={false}
-                  />
-        
+              <Lighting/>
               <OrbitControls
                   minDistance={4}
                   minZoom={0.002}
@@ -85,29 +74,12 @@ export default function CustomizerView(){
               <PresentationControls
               speed={1.5}
               global
-              
               polar={[-0.1, Math.PI / 3]}
               rotation={[Math.PI / 8,Math.PI / 4, 0]}
               >
                       <ActiveCart
                   activeCart={activeCart}
                   />
-         {/*      <SpotLight
-            distance={5}
-            angle={0.15}
-            attenuation={5}
-            anglePower={5} // Diffuse-cone anglePower (default: 5)
-            />
-           
-                
-            
-               
-           
-           
-            
-            //  */}
-            {/* <KartFourSeaterModel/> */}
-            {/* <FourSeaterModel2/> */}
             </PresentationControls>  
             </Canvas>
             </Suspense>

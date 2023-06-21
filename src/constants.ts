@@ -1,6 +1,9 @@
 import { KartFourSeaterModel } from "./components/models/Kart_Four_Seater"
 import { SixSeaterModel  } from "./components/models/Six_Seater_Kart"
 import { KartFourSeaterOppositeModel } from "./components/models/Kart_Four_Seater_Opposite"
+import { Model } from "./components/models/Six_Seater_Kart2"
+import { FourSeaterModel2 } from "./components/models/Kart_Four_Seater2"
+import { FourSeaterOppositeModel2 } from "./components/models/Kart_Four_Seater_Opposite2"
 
 interface Attributes{
     id:string | null | number,
@@ -18,9 +21,9 @@ interface AllFeature{
 
 
 export const cart = [
-  {id:1,cartName:"Four Seater Cart",Component:KartFourSeaterModel},
-  {id:2,cartName:"Four Seater Cart Opposite Each Other",Component:KartFourSeaterOppositeModel},
-  {id:2,cartName:"Six Seater Cart",Component:SixSeaterModel},
+  {id:1,cartName:"Four Seater Cart",Component:FourSeaterModel2},
+  {id:2,cartName:"Four Seater Cart Opposite Each Other",Component:FourSeaterOppositeModel2},
+  {id:2,cartName:"Six Seater Cart",Component:Model},
   // {id:3,cartName:""},
 ]
 export const environments = [

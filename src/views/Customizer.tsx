@@ -82,13 +82,13 @@ export default function CustomizerView(){
               rotation={[Math.PI / 8,Math.PI / 4, 0]}
               >
                {/* <GarageScene/> */}
-                  {/* <Stage 
+                  <Stage 
                     environment={{files:env}}
                     adjustCamera  
                     
-                    intensity={0} 
+                    intensity={-10} 
                     castShadow={true}
-                  > */}
+                  >
                 
                   <ActiveCart
                   activeCart={activeCart}
@@ -99,7 +99,7 @@ export default function CustomizerView(){
                   scale={[500,500,500]}
                   /> */}
                   
-                {/* </Stage>  */}
+                </Stage> 
            
            
             

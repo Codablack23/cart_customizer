@@ -64,8 +64,9 @@ export default function CustomizerView(){
               <div className="top-0 absolute left-0 w-full h-full">
               <Suspense fallback={<Loader/>}>
               <Canvas dpr={[1,2]}>   
-              <ambientLight intensity={1}/>
-              <spotLight intensity={0.5} angle={0.1} penumbra={1} position={[10, 15, 10]} castShadow />
+              
+              <ambientLight  intensity={-10}/>
+              {/* <spotLight intensity={0.5} angle={0.1} penumbra={1} position={[10, 15, 10]} castShadow /> */}
               <OrbitControls
                   minDistance={4}
                   minZoom={0.002}

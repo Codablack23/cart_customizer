@@ -273,7 +273,7 @@ type GLTFResult = GLTF & {
   }
 }
 
-export function Model(props: JSX.IntrinsicElements['group']) {
+export function KartFourSeaterOppositeModel(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF('/models/Kart_Four_Seater_Opposite.glb') as GLTFResult
   return (
     <group {...props} dispose={null}>

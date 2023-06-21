@@ -285,7 +285,7 @@ type GLTFResult = GLTF & {
   }
 }
 
-export function Model(props: JSX.IntrinsicElements['group']) {
+export function SixSeaterModel(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF('/models/Six_Seater_Kart.glb') as GLTFResult
   return (
     <group {...props} dispose={null}>

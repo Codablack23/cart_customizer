@@ -18,12 +18,12 @@ interface PlaneProps{
     name:string,
 }
 
-// function GarageScene(){
-//   const {scene} = useLoader(GLTFLoader,"/models/scene.glb")
-//   scene.scale.set(6,6,6)
-//   scene.position.set(0,-1.5,0)
-//   return <primitive object={scene}/>
-// }
+function GarageScene(){
+  const {scene} = useLoader(GLTFLoader,"/models/scene.glb")
+  scene.scale.set(6,6,6)
+  scene.position.set(0,-1.5,0)
+  return <primitive object={scene}/>
+}
 
 function Plane({texture,position,args,name}:PlaneProps){
   return(
@@ -77,7 +77,7 @@ export default function CustomizerView(){
               polar={[-0.1, Math.PI / 3]}
               rotation={[Math.PI / 8,Math.PI / 4, 0]}
               >
-               {/* <GarageScene/> */}
+               <GarageScene/>
                   <Stage 
                     environment={{files:env}}
                     adjustCamera  

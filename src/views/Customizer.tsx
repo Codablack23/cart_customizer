@@ -11,6 +11,7 @@ import { Texture, } from "three"
 // import { Model } from "../components/models/Kart6"
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import { FourSeaterModel2 } from "../components/models/Kart_Four_Seater2"
+import { KartFourSeaterModel } from "../components/models/Kart_Four_Seater"
 
 interface PlaneProps{
     texture?:Texture,
@@ -20,18 +21,18 @@ interface PlaneProps{
 }
 
 function GarageScene(){
-  const {scene} = useLoader(GLTFLoader,"/models/scene.glb")
+  const {scene} = useLoader(GLTFLoader,"/models/Six_Seater_Kart.glb")
   scene.scale.set(5,5,5)
   scene.position.set(0,-1.5,0)
   return <primitive object={scene}/>
 }
 
-function Plane({texture,position,args,name}:PlaneProps){
-  return(
-  <Box name="right-side-view" args={args} position={position}>
-  <meshStandardMaterial map={texture} color={texture?undefined:"#fff"} />
-</Box>)
-}
+// function Plane({texture,position,args,name}:PlaneProps){
+//   return(
+//   <Box name="right-side-view" args={args} position={position}>
+//   <meshStandardMaterial map={texture} color={texture?undefined:"#fff"} />
+// </Box>)
+// }
 
 const Loader = ()=>{
   return (
@@ -64,8 +65,16 @@ export default function CustomizerView(){
               <SelectModel/>
               <div className="top-0 absolute left-0 w-full h-full">
               <Suspense fallback={<Loader/>}>
-              <Canvas>   
-{/*
+              <Canvas frameloop="demand"> 
+              <ambientLight intensity={2}/>
+              <OrbitControls
+                  minDistance={4}
+                  minZoom={0.002}
+                  maxDistance={8}
+                  maxZoom={0.007}
+                  enableRotate={false}
+                  />
+        
               <OrbitControls
                   minDistance={4}
                   minZoom={0.002}
@@ -80,7 +89,10 @@ export default function CustomizerView(){
               polar={[-0.1, Math.PI / 3]}
               rotation={[Math.PI / 8,Math.PI / 4, 0]}
               >
-            <SpotLight
+                      <ActiveCart
+                  activeCart={activeCart}
+                  />
+         {/*      <SpotLight
             distance={5}
             angle={0.15}
             attenuation={5}
@@ -88,15 +100,15 @@ export default function CustomizerView(){
             />
            
                 
-                  <ActiveCart
-                  activeCart={activeCart}
-                  />
+            
                
            
            
             
-            </PresentationControls>   */}
-            <FourSeaterModel2/>
+            //  */}
+            {/* <KartFourSeaterModel/> */}
+            {/* <FourSeaterModel2/> */}
+            </PresentationControls>  
             </Canvas>
             </Suspense>
               </div>

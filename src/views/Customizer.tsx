@@ -18,12 +18,12 @@ interface PlaneProps{
     name:string,
 }
 
-function GarageScene(){
-  const {scene} = useLoader(GLTFLoader,"/models/scene.glb")
-  scene.scale.set(6,6,6)
-  scene.position.set(0,-1.5,0)
-  return <primitive object={scene}/>
-}
+// function GarageScene(){
+//   const {scene} = useLoader(GLTFLoader,"/models/scene.glb")
+//   scene.scale.set(6,6,6)
+//   scene.position.set(0,-1.5,0)
+//   return <primitive object={scene}/>
+// }
 
 function Plane({texture,position,args,name}:PlaneProps){
   return(
@@ -61,7 +61,6 @@ export default function CustomizerView(){
           <div className="grid md:grid-cols-3">
             <div className="canvas-container relative top-0 h-80 md:h-screen p-5 md:col-span-2">
               <SelectModel/>
-              {/* <SelectEnvironemt/> */}
               <div className="top-0 absolute left-0 w-full h-full">
               <Suspense fallback={<Loader/>}>
               <Canvas dpr={[1,2]}>   
@@ -74,13 +73,11 @@ export default function CustomizerView(){
                   />
               <PresentationControls
               speed={1.5}
-              // zoom={1}
               global
               polar={[-0.1, Math.PI / 3]}
-              // rotation={[Math.PI / 8,  0]}
               rotation={[Math.PI / 8,Math.PI / 4, 0]}
               >
-               <GarageScene/>
+               {/* <GarageScene/> */}
                   <Stage 
                     environment={{files:env}}
                     adjustCamera  
@@ -100,10 +97,7 @@ export default function CustomizerView(){
                   
                 </Stage> 
            
-                {/* <mesh position={[0,-10,0]} rotation={[-Math.PI / 2, 0,0]}>
-                  <planeGeometry args={[20, 40]} />
-                  <meshStandardMaterial map={floorTexture}/>
-                </mesh>   */}
+           
             
             </PresentationControls>  
             </Canvas>

@@ -61,11 +61,11 @@ export default function CustomizerView(){
           <div className="grid md:grid-cols-3">
             <div className="canvas-container relative top-0 h-80 md:h-screen p-5 md:col-span-2">
               <SelectModel/>
-              <ambientLight intensity={1}/>
-              <spotLight intensity={0.5} angle={0.1} penumbra={1} position={[10, 15, 10]} castShadow />
               <div className="top-0 absolute left-0 w-full h-full">
               <Suspense fallback={<Loader/>}>
               <Canvas dpr={[1,2]}>   
+              <ambientLight intensity={1}/>
+              <spotLight intensity={0.5} angle={0.1} penumbra={1} position={[10, 15, 10]} castShadow />
               <OrbitControls
                   minDistance={4}
                   minZoom={0.002}

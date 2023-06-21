@@ -64,19 +64,20 @@ export default function CustomizerView(){
               <Canvas frameloop="demand"> 
               <ambientLight intensity={2}/>
               <Lighting/>
-              <OrbitControls
-                  minDistance={4}
-                  minZoom={0.002}
-                  maxDistance={8}
-                  maxZoom={0.007}
-                  enableRotate={false}
-                  />
+            
               <PresentationControls
               speed={1.5}
               global
               polar={[-0.1, Math.PI / 3]}
               rotation={[Math.PI / 8,Math.PI / 4, 0]}
               >
+                <OrbitControls
+                minDistance={4}
+                minZoom={0.002}
+                maxDistance={8}
+                maxZoom={0.007}
+                enableRotate={false}
+                />
                       <ActiveCart
                   activeCart={activeCart}
                   />

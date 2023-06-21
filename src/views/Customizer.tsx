@@ -61,7 +61,7 @@ export default function CustomizerView(){
           <div className="grid md:grid-cols-3">
             <div className="canvas-container relative top-0 h-80 md:h-screen p-5 md:col-span-2">
               <SelectModel/>
-              <ambientLight color={"#000"} intensity={0.3}/>
+              <ambientLight intensity={1}/>
               <div className="top-0 absolute left-0 w-full h-full">
               <Suspense fallback={<Loader/>}>
               <Canvas dpr={[1,2]}>   

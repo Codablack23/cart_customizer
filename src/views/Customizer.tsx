@@ -62,7 +62,7 @@ export default function CustomizerView(){
               <div className="top-0 absolute left-0 w-full h-full">
               <Suspense fallback={<Loader/>}>
               <Canvas frameloop="demand"> 
-              <ambientLight intensity={2}/>
+              <ambientLight color={"#000"} intensity={100}/>
               <Lighting/>
             
               <PresentationControls

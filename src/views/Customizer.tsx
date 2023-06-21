@@ -3,7 +3,7 @@ import "../styles/customizer.scss"
 import Customizer from "../components/Customizer"
 // import {GarageModel} from "../components/models/Garage"
 import { Suspense, useContext,useState} from "react"
-import {PresentationControls, Stage,Box, OrbitControls} from "@react-three/drei/web"
+import {PresentationControls, Stage,Box, OrbitControls, SpotLight} from "@react-three/drei/web"
 import { FeatureContext } from "../contexts/FeatureContext"
 import SelectModel from "../components/SelectModel"
 import { cart } from "../constants"
@@ -81,14 +81,20 @@ export default function CustomizerView(){
               polar={[-0.1, Math.PI / 3]}
               rotation={[Math.PI / 8,Math.PI / 4, 0]}
               >
+            <SpotLight
+            distance={5}
+            angle={0.15}
+            attenuation={5}
+            anglePower={5} // Diffuse-cone anglePower (default: 5)
+            />
                {/* <GarageScene/> */}
-                  <Stage 
+                  {/* <Stage 
                     environment={{files:env}}
                     adjustCamera  
                     
                     intensity={-10} 
                     castShadow={true}
-                  >
+                  > */}
                 
                   <ActiveCart
                   activeCart={activeCart}
@@ -99,7 +105,7 @@ export default function CustomizerView(){
                   scale={[500,500,500]}
                   /> */}
                   
-                </Stage> 
+                {/* </Stage>  */}
            
            
             

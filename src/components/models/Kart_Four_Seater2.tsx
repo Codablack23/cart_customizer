@@ -267,7 +267,7 @@ export function FourSeaterModel2(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF('/models/Kart_Four_Seater2.glb') as GLTFResult
   return (
     <group {...props} dispose={null}>
-      <spotLight intensity={2717.571} angle={0.99} penumbra={1} decay={2} position={[-0.565, 5.068, 8.636]} rotation={[0.581, 0.002, -1.379]} scale={-1} />
+      {/* <spotLight intensity={2717.571} angle={0.99} penumbra={1} decay={2} position={[-0.565, 5.068, 8.636]} rotation={[0.581, 0.002, -1.379]} scale={-1} />
       <spotLight intensity={8696.226} angle={0.99} penumbra={1} decay={2} position={[-11.722, 6.086, 0.738]} rotation={[1.782, -1.019, 0.197]} scale={-1} />
       <spotLight intensity={8696.226} angle={0.99} penumbra={1} decay={2} position={[11.404, 6.086, 0.738]} rotation={[-1.359, -1.019, 0.197]} />
       <spotLight intensity={27175.707} angle={0.577} penumbra={1} decay={2} position={[3.036, 3.77, 1.459]} rotation={[-0.761, 0.787, -0.352]} />
@@ -289,7 +289,7 @@ export function FourSeaterModel2(props: JSX.IntrinsicElements['group']) {
       <pointLight intensity={43481.13} decay={2} color="#89ffcd" position={[-16.415, 4.894, 0.724]} rotation={[-Math.PI / 2, 0, 0]} />
       <pointLight intensity={43481.13} decay={2} color="#fcf2ff" position={[4.964, 7.581, 0.239]} rotation={[-Math.PI / 2, 0, 0]} />
       <pointLight intensity={43481.13} decay={2} color="#fcf2ff" position={[-6.024, 7.581, 0.239]} rotation={[-Math.PI / 2, 0, 0]} />
-      <pointLight intensity={54351.413} decay={2} position={[4.076, 5.904, -1.005]} rotation={[-1.839, 0.602, 1.932]} />
+      <pointLight intensity={54351.413} decay={2} position={[4.076, 5.904, -1.005]} rotation={[-1.839, 0.602, 1.932]} /> */}
       <mesh geometry={nodes.Cube014.geometry} material={materials['Black Plastic.001']} />
       <mesh geometry={nodes.Cube017.geometry} material={materials['Black Plastic.001']} />
       <mesh geometry={nodes.Cube020.geometry} material={materials['Black plastic old scratched.001']} />

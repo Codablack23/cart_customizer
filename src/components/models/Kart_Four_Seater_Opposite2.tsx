@@ -276,12 +276,12 @@ export function FourSeaterOppositeModel2(props: JSX.IntrinsicElements['group']) 
   return (
     <group {...props} dispose={null}>
       <FeatureFS/>
-      <spotLight intensity={2717.571} angle={0.99} penumbra={1} decay={2} position={[-0.565, 5.068, 8.636]} rotation={[0.581, 0.002, -1.379]} scale={-1} />
+      {/* <spotLight intensity={2717.571} angle={0.99} penumbra={1} decay={2} position={[-0.565, 5.068, 8.636]} rotation={[0.581, 0.002, -1.379]} scale={-1} />
       <spotLight intensity={8696.226} angle={0.99} penumbra={1} decay={2} position={[-11.722, 6.086, 0.738]} rotation={[1.782, -1.019, 0.197]} scale={-1} />
       <spotLight intensity={8696.226} angle={0.99} penumbra={1} decay={2} position={[11.404, 6.086, 0.738]} rotation={[-1.359, -1.019, 0.197]} />
       <spotLight intensity={27175.707} angle={0.577} penumbra={1} decay={2} position={[3.036, 3.77, 1.459]} rotation={[-0.761, 0.787, -0.352]} />
-      <spotLight intensity={27175.707} angle={0.778} penumbra={1} decay={2} color="#e8fffe" position={[-4.397, 4.022, 4.811]} rotation={[-0.604, -0.74, 1.055]} />
-      <spotLight intensity={27175.707} angle={0.884} penumbra={1} decay={2} color="#e8fffe" position={[-2.34, 4.973, -4.552]} rotation={[-2.091, -0.381, 0.057]} />
+      <spotLight intensity={27175.707} angle={0.778} penumbra={1} decay={2} color="#e8fffe" position={[-4.397, 4.022, 4.811]} rotation={[-0.604, -0.74, 1.055]} /> */}
+      {/* <spotLight intensity={27175.707} angle={0.884} penumbra={1} decay={2} color="#e8fffe" position={[-2.34, 4.973, -4.552]} rotation={[-2.091, -0.381, 0.057]} />
       <pointLight intensity={43481.13} decay={2} color="#e4ff6b" position={[14.929, 4.894, -19.195]} rotation={[-Math.PI / 2, 0, 0]} />
       <pointLight intensity={43481.13} decay={2} color="#89ffcd" position={[14.929, 4.894, 0.724]} rotation={[-Math.PI / 2, 0, 0]} />
       <pointLight intensity={43481.13} decay={2} color="#ffd368" position={[14.929, 4.894, 19.789]} rotation={[-Math.PI / 2, 0, 0]} />
@@ -313,7 +313,7 @@ export function FourSeaterOppositeModel2(props: JSX.IntrinsicElements['group']) 
       <pointLight intensity={883.21} decay={2} position={[2.205, 2.524, -3.281]} rotation={[-Math.PI / 2, 0, 0]} />
       <pointLight intensity={12837.804} decay={2} color="#ffd368" position={[-16.779, 4.894, 19.789]} rotation={[-Math.PI / 2, 0, 0]} />
       <pointLight intensity={54351.413} decay={2} position={[-5.989, 5.904, -1.005]} rotation={[-1.839, 0.602, 1.932]} />
-      <pointLight intensity={54351.413} decay={2} position={[4.076, 5.904, -1.005]} rotation={[-1.839, 0.602, 1.932]} />
+      <pointLight intensity={54351.413} decay={2} position={[4.076, 5.904, -1.005]} rotation={[-1.839, 0.602, 1.932]} /> */}
       <mesh geometry={nodes.Cylinder010.geometry} material={nodes.Cylinder010.material} />
       <mesh geometry={nodes.Cylinder016.geometry} material={nodes.Cylinder016.material} />
       <mesh geometry={nodes.Plane016.geometry} material={materials['Material.015']} />
@@ -444,7 +444,7 @@ export function FourSeaterOppositeModel2(props: JSX.IntrinsicElements['group']) 
       <mesh geometry={nodes.Cylinder043.geometry} material={materials['Rough Iron Steel']} />
       <mesh geometry={nodes.Plane020.geometry} material={materials['Steel.002']} />
       <mesh geometry={nodes.Plane022.geometry} material={materials['Rough Iron Steel']}>
-        <mesh geometry={nodes.Plane021_1.geometry} material={materials['Material.009']} />
+        {/* <mesh geometry={nodes.Plane021_1.geometry} material={materials['Material.009']} /> */}
       </mesh>
       <mesh geometry={nodes.Plane023.geometry} material={materials['Dark Steel']} />
       <mesh geometry={nodes.Plane003.geometry} material={materials['Material.002']} />

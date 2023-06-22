@@ -41,7 +41,7 @@ export const FeatureContext = createContext<FeatureContextInterface>({
 })
 
 export default function FeaturesContextProvider({children}:FeatureProps){
-    const [activeCart,setActiveCart] = useState(cart[1].cartName)
+    const [activeCart,setActiveCart] = useState(cart[0].cartName)
     const [environment,setEnv] = useState({
         name:"Paul Lobe Haus",
         src:"/environment/garage.hdr"

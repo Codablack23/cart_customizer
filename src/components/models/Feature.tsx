@@ -20,7 +20,17 @@ import { SteeringModel3 } from "./Steerings/Steering3"
 import { SteeringModel4 } from "./Steerings/Steering4"
 import { SteeringModel5 } from "./Steerings/Steering5"
 import { FeatureContext } from "../../contexts/FeatureContext"
-import { Rim1, Rim10, Rim2, Rim3, Rim4, Rim5, Rim6, Rim7, Rim8, Rim9 } from "./Rims/FSRims"
+import { FSRim1 } from "./Rims/FSRims/1"
+import { FSRim2 } from "./Rims/FSRims/2"
+import { FSRim10 } from "./Rims/FSRims/10"
+import { FSRim3 } from "./Rims/FSRims/3"
+import { FSRim4 } from "./Rims/FSRims/4"
+import { FSRim5 } from "./Rims/FSRims/5"
+import { FSRim6 } from "./Rims/FSRims/6"
+import { FSRim7 } from "./Rims/FSRims/7"
+import { FSRim8 } from "./Rims/FSRims/8"
+import { FSRim9 } from "./Rims/FSRims/9"
+
 
 
 const rims = [
@@ -36,16 +46,16 @@ const rims = [
     {name:"Rim 10",Component:<RimModel10/>}
   ] 
 const fsrims = [
-    {name:"Rim 1",Component:<Rim1/>},
-    {name:"Rim 2",Component:<Rim2/>},
-    {name:"Rim 3",Component:<Rim3/>},
-    {name:"Rim 4",Component:<Rim4/>},
-    {name:"Rim 5",Component:<Rim5/>},
-    {name:"Rim 6",Component:<Rim6/>},
-    {name:"Rim 7",Component:<Rim7/>},
-    {name:"Rim 8",Component:<Rim8/>},
-    {name:"Rim 9",Component:<Rim9/>},
-    {name:"Rim 10",Component:<Rim10/>}
+    {name:"Rim 1",Component:<FSRim1/>},
+    {name:"Rim 2",Component:<FSRim2/>},
+    {name:"Rim 3",Component:<FSRim3/>},
+    {name:"Rim 4",Component:<FSRim4/>},
+    {name:"Rim 5",Component:<FSRim5/>},
+    {name:"Rim 6",Component:<FSRim6/>},
+    {name:"Rim 7",Component:<FSRim7/>},
+    {name:"Rim 8",Component:<FSRim8/>},
+    {name:"Rim 9",Component:<FSRim9/>},
+    {name:"Rim 10",Component:<FSRim10/>}
   ] 
 const wheels = []
 const solarPanel = [{name:"Solar Panel", Component:<SolarPanelModel/>}]

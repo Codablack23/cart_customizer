@@ -61,8 +61,8 @@ export default function CustomizerView(){
               <SelectModel/>
               <div className="top-0 absolute left-0 w-full h-full">
               <Suspense fallback={<Loader/>}>
-              <Canvas frameloop="demand"> 
-              <ambientLight color={"#000"} intensity={1}/>
+              <Canvas frameloop="demand" shadows> 
+              {/* <ambientLight castShadow color={"#000"} intensity={1}/> */}
               <Lighting/>
             
               <PresentationControls

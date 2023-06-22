@@ -7,6 +7,7 @@ import * as THREE from 'three'
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
+import {Feature4} from './Feature'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -267,6 +268,7 @@ export function FourSeaterModel2(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF('/models/Kart_Four_Seater2.glb') as GLTFResult
   return (
     <group {...props} dispose={null}>
+      <Feature4/>
       {/* <spotLight intensity={2717.571} angle={0.99} penumbra={1} decay={2} position={[-0.565, 5.068, 8.636]} rotation={[0.581, 0.002, -1.379]} scale={-1} />
       <spotLight intensity={8696.226} angle={0.99} penumbra={1} decay={2} position={[-11.722, 6.086, 0.738]} rotation={[1.782, -1.019, 0.197]} scale={-1} />
       <spotLight intensity={8696.226} angle={0.99} penumbra={1} decay={2} position={[11.404, 6.086, 0.738]} rotation={[-1.359, -1.019, 0.197]} />

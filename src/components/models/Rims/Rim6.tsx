@@ -18,7 +18,7 @@ type GLTFResult = GLTF & {
 }
 
 export function RimModel6(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF('/models/rim/Rim 6.glb') as GLTFResult
+  const { nodes, materials } = useGLTF('/models/rims/Rim 6.glb') as GLTFResult
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.rIM_6.geometry} material={materials['default  #2']} position={[-1.274, 0.525, 1.434]} rotation={[-Math.PI, 0, -Math.PI]} scale={[0.489, 1.061, 1.061]} />
@@ -26,4 +26,4 @@ export function RimModel6(props: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload('/models/rim/Rim 6.glb')
+useGLTF.preload('/models/rims/Rim 6.glb')

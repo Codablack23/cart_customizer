@@ -107,24 +107,14 @@ export default function Lighting(){
         position={[-16.779, 4.894, 19.789]}
         rotation={[-Math.PI / 2, 0, 0]}
       />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Plane016.geometry}
-        material={materials["Material.015"]}
-      />
+    
       <pointLight
         intensity={0.08}
         decay={2}
         position={[-5.989, 5.904, -1.005]}
         rotation={[-1.839, 0.602, 1.932]}
       />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Cube015.geometry}
-        material={materials["Material.011"]}
-      />
+   
       <pointLight
         intensity={0.1}
         decay={2}

@@ -20,7 +20,7 @@ type GLTFResult = GLTF & {
 }
 
 export function RimModel1(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF('/models/rim/Rim 1.glb') as GLTFResult
+  const { nodes, materials } = useGLTF('/models/rims/Rim 1.glb') as GLTFResult
   return (
     <group {...props} dispose={null}>
       <group position={[1.039, 0.528, -2.533]} rotation={[1.196, -1.565, -1.571]} scale={[0.327, 0.327, 0.331]}>
@@ -31,4 +31,4 @@ export function RimModel1(props: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload('/models/rim/Rim 1.glb')
+useGLTF.preload('/models/rims/Rim 1.glb')

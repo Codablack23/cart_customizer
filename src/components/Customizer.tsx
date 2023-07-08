@@ -35,7 +35,7 @@ const Feature = ({feature}:FeatureProps)=>{
      }
   }
   return (
-  <div className="bg-black text-white rounded-md p-2 mx-2 my-5 mb-2">
+  <div className="bg-white text-gray-900 rounded-md p-2 mx-2 my-5 mb-2">
      <header className="flex items-center justify-between">
       <div className="flex">
        <div>
@@ -49,13 +49,13 @@ const Feature = ({feature}:FeatureProps)=>{
     <div ref={collapseRef} className="p-2 rounded-md mt-3 hidden">
         <ul className="grid grid-cols-2 gap-4">
             {allFeatures[feature.key].map((att)=>
-              <li key={`${feature.key}-${att.id?att.id:0}`} className="px-2 py-4 text-white  flex items-center justify-between border-b border-blue-500">
+              <li key={`${feature.key}-${att.id?att.id:0}`} className="px-2 py-4  flex items-center justify-between border-b border-gray-900">
                 <div>
                 <p>{att.feature_name}</p>
                 </div>
                 <button 
                 onClick={selectAttribute(att.feature_name,att.id)}
-                className={`rounded-full border ${active==att.id?"bg-blue-500":""} border-blue-500 h-4 w-4 cursor-pointer`}></button>
+                className={`rounded-full border ${active==att.id?"bg-gray-900":""} border-gray-900 h-4 w-4 cursor-pointer`}></button>
             </li>)}
         </ul>
     </div>
@@ -71,7 +71,7 @@ export default function Customizer(){
         {name:"Top Roof Carrier",id:1,key:"roof"},
     ]
     return (
-        <div className="bg-black text-white md:h-screen overflow-y-auto p-4">
+        <div className="bg-white text-gray-900 md:h-screen overflow-y-auto p-4">
           <p className="text-xl font-semibold text-center">Customize Your Golf Cart</p>
           <div className="gap-1">
           {features.map(feature=>(

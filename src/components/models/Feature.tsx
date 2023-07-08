@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { BasketModel } from "./Basket"
 import { RimModel1 } from "./Rims/Rim1"
 import { RimModel10 } from "./Rims/Rim10"
-import { RimModel2 } from "./Rims/Rim2"
+// import { RimModel2 } from "./Rims/Rim2"
 import { RimModel3 } from "./Rims/Rim3"
 import { RimModel4 } from "./Rims/Rim4"
 import { RimModel5 } from "./Rims/Rim5"
@@ -30,6 +30,7 @@ import { FSRim6 } from "./Rims/FSRims/6"
 import { FSRim7 } from "./Rims/FSRims/7"
 import { FSRim8 } from "./Rims/FSRims/8"
 import { FSRim9 } from "./Rims/FSRims/9"
+import { RimModel2 } from "./Rims/RIm2"
 
 
 

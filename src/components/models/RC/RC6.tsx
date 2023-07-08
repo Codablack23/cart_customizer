@@ -22,7 +22,7 @@ type GLTFActions = Record<ActionName, THREE.AnimationAction>
 
 export function KartSixRoofModel(props: JSX.IntrinsicElements['group']) {
   const group = useRef<any>()
-  const { nodes, materials, animations } = useGLTF('/RC6.glb') as GLTFResult
+  const { nodes, materials, animations } = useGLTF('/models/others/RC6.glb') as GLTFResult
   const { actions } = useAnimations<any>(animations, group)
   return (
     <group ref={group} {...props} dispose={null}>
@@ -33,4 +33,4 @@ export function KartSixRoofModel(props: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload('/RC6.glb')
+useGLTF.preload('/models/others/RC6.glb')

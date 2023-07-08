@@ -30,7 +30,7 @@ import { FSRim6 } from "./Rims/FSRims/6"
 import { FSRim7 } from "./Rims/FSRims/7"
 import { FSRim8 } from "./Rims/FSRims/8"
 import { FSRim9 } from "./Rims/FSRims/9"
-import { RimModel2 } from "./Rims/RIm2"
+import { RimModel2 } from "./Rims/Rim2"
 
 
 

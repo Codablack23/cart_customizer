@@ -24,7 +24,7 @@ type GLTFResult = GLTF & {
 }
 
 export function KartSixSolarPanelModel(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF('/SP6.glb') as GLTFResult
+  const { nodes, materials } = useGLTF('/models/others/SP6.glb') as GLTFResult
   return (
     <group {...props} dispose={null}>
       <group position={[0.018, 3.161, 0.253]} scale={[0.806, 0.931, 1.578]}>
@@ -37,4 +37,4 @@ export function KartSixSolarPanelModel(props: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload('/SP6.glb')
+useGLTF.preload('/models/others/SP6.glb')

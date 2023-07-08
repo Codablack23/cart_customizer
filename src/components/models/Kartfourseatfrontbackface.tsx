@@ -416,8 +416,8 @@ export function FourSeaterOppositeKartModel(props: JSX.IntrinsicElements['group'
       <mesh geometry={nodes.Plane018.geometry} material={materials['Glass.002']} />
       <mesh geometry={nodes.Curve.geometry} material={materials['Material.061']} />
       <mesh geometry={nodes.Curve001.geometry} material={materials['Material.061']} />
-      <mesh geometry={nodes.mojo.geometry} material={materials['mojo.001']} />
-      <mesh geometry={nodes.mojo001.geometry} material={materials['mojo.001']} />
+      {/* <mesh geometry={nodes.mojo.geometry} material={materials['mojo.001']} />
+      <mesh geometry={nodes.mojo001.geometry} material={materials['mojo.001']} /> */}
       <mesh geometry={nodes.Object_0002.geometry} material={materials['shed.002']} />
       <mesh geometry={nodes.Object_0002_1.geometry} material={materials['Concrete_Wall_vhjldck.002']} />
       <mesh geometry={nodes.Object_0003.geometry} material={materials['shed.003']} />

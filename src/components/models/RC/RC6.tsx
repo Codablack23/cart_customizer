@@ -20,7 +20,7 @@ type GLTFResult = GLTF & {
 type ActionName = 'ROOF'
 type GLTFActions = Record<ActionName, THREE.AnimationAction>
 
-export function Model(props: JSX.IntrinsicElements['group']) {
+export function KartSixRoofModel(props: JSX.IntrinsicElements['group']) {
   const group = useRef<any>()
   const { nodes, materials, animations } = useGLTF('/RC6.glb') as GLTFResult
   const { actions } = useAnimations<any>(animations, group)

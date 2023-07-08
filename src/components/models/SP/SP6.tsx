@@ -23,7 +23,7 @@ type GLTFResult = GLTF & {
   }
 }
 
-export function Model(props: JSX.IntrinsicElements['group']) {
+export function KartSixSolarPanelModel(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF('/SP6.glb') as GLTFResult
   return (
     <group {...props} dispose={null}>

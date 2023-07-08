@@ -31,7 +31,7 @@ export function SteeringModel4(props: JSX.IntrinsicElements['group']) {
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">
         {/* <mesh name="Bolt025" geometry={nodes.Bolt025.geometry} material={nodes.Bolt025.material} position={[-0.58, 1.89, -1.55]} rotation={[0.73, 0, 0]} scale={0.1} /> */}
-        <mesh name="Plane053" geometry={nodes.Plane053.geometry} material={materials['Black Plastic.002']} position={[-0.58, 1.98, -1.45]} rotation={[0.73, 0, 0]} scale={0.23} />
+        {/* <mesh name="Plane053" geometry={nodes.Plane053.geometry} material={materials['Black Plastic.002']} position={[-0.58, 1.98, -1.45]} rotation={[0.73, 0, 0]} scale={0.23} /> */}
         <mesh name="Plane055" geometry={nodes.Plane055.geometry} material={materials['BASE.001']} position={[-0.58, 2.01, -1.48]} rotation={[0.73, 0, 0]} scale={0.1} />
       </group>
     </group>

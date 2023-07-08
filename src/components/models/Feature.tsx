@@ -10,9 +10,9 @@ import { RimModel6 } from "./Rims/Rim6"
 import { RimModel7 } from "./Rims/Rim7"
 import { RimModel8 } from "./Rims/Rim8"
 import { RimModel9 } from "./Rims/Rim9"
-import { RoofModel } from "./RC/Roof"
+import { KartSixRoofModel } from "./RC/RC6"
 import { RoofModel40 } from "./RC/RC4"
-import { SolarPanelModel } from "./SP/SolarPanel"
+import { KartSixSolarPanelModel } from "./SP/SP6"
 import { SolarPanelModel40 } from "./SP/SP4"
 import { SteeringModel1 } from "./Steerings/Steering1"
 import { SteeringModel2 } from "./Steerings/Steering2"
@@ -59,10 +59,10 @@ const fsrims = [
     {name:"Rim 10",Component:<FSRim10/>}
   ] 
 const wheels = []
-const solarPanel = [{name:"Solar Panel", Component:<SolarPanelModel/>}]
+const solarPanel = [{name:"Solar Panel", Component:<KartSixSolarPanelModel/>}]
 const solarPanel4 = [{name:"Solar Panel", Component:<SolarPanelModel40/>}]
 const basket = [{name:"Basket", Component:<BasketModel/>}]
-const roof = [{name:"Roof", Component:<RoofModel/>}]
+const roof = [{name:"Roof", Component:<KartSixRoofModel/>}]
 const roof4 = [{name:"Roof", Component:<RoofModel40/>}]
 const steerings = [
     {name:"Steering 1",Component:<SteeringModel1/>},

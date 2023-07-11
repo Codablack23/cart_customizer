@@ -418,9 +418,6 @@ export function SixSeaterKartModel(props: JSX.IntrinsicElements['group']) {
       <mesh geometry={nodes.Cylinder041.geometry} material={materials['Dark Steel']} />
       <mesh geometry={nodes.Cylinder043.geometry} material={materials['Rough Iron Steel']} />
       <mesh geometry={nodes.Plane020.geometry} material={materials['Steel.002']} />
-      {/* <mesh geometry={nodes.Plane022.geometry} material={materials['Rough Iron Steel']}>
-        <mesh geometry={nodes.Plane021_1.geometry} material={materials['Material.044']} />
-      </mesh> */}
       <mesh geometry={nodes.Plane023.geometry} material={materials['Dark Steel']} />
       <mesh geometry={nodes.light.geometry} material={materials['Glass.001']} />
       <mesh geometry={nodes.Circle012.geometry} material={materials['Material.002']} />
@@ -429,8 +426,6 @@ export function SixSeaterKartModel(props: JSX.IntrinsicElements['group']) {
       <mesh geometry={nodes.Cube007.geometry} material={materials['Material.023']} />
       <mesh geometry={nodes.Curve.geometry} material={materials['Material.017']} />
       <mesh geometry={nodes.Curve001.geometry} material={materials['Material.017']} />
-      {/* <mesh geometry={nodes.mojo.geometry} material={materials.mojo} />
-      <mesh geometry={nodes.mojo001.geometry} material={materials.mojo} /> */}
       <mesh geometry={nodes.Object_0.geometry} material={materials.shed} />
       <mesh geometry={nodes.Object_0_1.geometry} material={materials.Concrete_Wall_vhjldck} />
       <mesh geometry={nodes.Cube001_1.geometry} material={materials['Material.011']} />

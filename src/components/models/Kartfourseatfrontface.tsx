@@ -389,8 +389,6 @@ export function FourSeaterKartModel(props: JSX.IntrinsicElements['group']) {
       <mesh geometry={nodes.Circle006.geometry} material={materials['Material.064']} />
       <mesh geometry={nodes.Circle009.geometry} material={materials['Material.064']} />
       <mesh geometry={nodes.Plane016.geometry} material={materials['Material.015']} />
-      {/* <mesh geometry={nodes.Plane002.geometry} material={materials['Material.001']} />
-      <mesh geometry={nodes.Plane001.geometry} material={materials['Material.001']} /> */}
       <mesh geometry={nodes.Cube015.geometry} material={materials['Material.011']} />
       <mesh geometry={nodes.Cube007.geometry} material={materials['Material.011']} />
       <mesh geometry={nodes.Cube006.geometry} material={materials['Material.011']} />
@@ -399,8 +397,6 @@ export function FourSeaterKartModel(props: JSX.IntrinsicElements['group']) {
       <mesh geometry={nodes.Cube036.geometry} material={materials['Material.023']} />
       <mesh geometry={nodes.Curve.geometry} material={materials['Material.002']} />
       <mesh geometry={nodes.Curve001.geometry} material={materials['Material.002']} />
-      {/* <mesh geometry={nodes.mojo.geometry} material={materials.mojo} />
-      <mesh geometry={nodes.mojo001.geometry} material={materials.mojo} /> */}
       <mesh geometry={nodes.Cube086.geometry} material={materials['Steel.005']} />
       <mesh geometry={nodes.Cube087.geometry} material={materials['Steel.005']} />
       <mesh geometry={nodes.Cube090.geometry} material={materials['Dark Steel.002']} />

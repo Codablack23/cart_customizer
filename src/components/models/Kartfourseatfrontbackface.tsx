@@ -267,7 +267,8 @@ type GLTFResult = GLTF & {
     ['Material.060']: THREE.MeshStandardMaterial
     ['Glass.002']: THREE.MeshStandardMaterial
     ['Material.061']: THREE.MeshStandardMaterial
-    ['mojo.001']: THREE.MeshStandardMaterial
+    ['mojo.001']: THREE.MeshStandardMaterial,
+    mojo: THREE.MeshStandardMaterial
   }
 }
 
@@ -406,6 +407,7 @@ export function FourSeaterOppositeKartModel(props: JSX.IntrinsicElements['group'
       <mesh geometry={nodes.Plane022.geometry} material={materials['Rough Iron Steel.001']}>
         <mesh geometry={nodes.Plane021.geometry} material={materials['Material.057']} />
       </mesh>
+      <mesh geometry={nodes.mojo001.geometry} material={materials.mojo} />
       <mesh geometry={nodes.Plane023.geometry} material={materials['Dark Steel.002']} />
       <mesh geometry={nodes.Plane003.geometry} material={materials['Material.058']} />
       <mesh geometry={nodes.Cube006.geometry} material={materials['Material.059']} />

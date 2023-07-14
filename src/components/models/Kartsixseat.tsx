@@ -276,7 +276,6 @@ type GLTFResult = GLTF & {
     ['Material.044']: THREE.MeshStandardMaterial
     ['Glass.001']: THREE.MeshStandardMaterial
     ['Material.017']: THREE.MeshStandardMaterial
-    mojo: THREE.MeshStandardMaterial
   }
 }
 
@@ -418,6 +417,10 @@ export function SixSeaterKartModel(props: JSX.IntrinsicElements['group']) {
       <mesh geometry={nodes.Cylinder041.geometry} material={materials['Dark Steel']} />
       <mesh geometry={nodes.Cylinder043.geometry} material={materials['Rough Iron Steel']} />
       <mesh geometry={nodes.Plane020.geometry} material={materials['Steel.002']} />
+      <mesh geometry={nodes.Plane022.geometry} material={materials['Rough Iron Steel']}>
+        {/* <mesh geometry={nodes.Plane021_1.geometry} material={materials['Material.044']} /> */}
+      </mesh>
+      <mesh geometry={nodes.mojo001.geometry} material={materials.mojo} />
       <mesh geometry={nodes.Plane023.geometry} material={materials['Dark Steel']} />
       <mesh geometry={nodes.light.geometry} material={materials['Glass.001']} />
       <mesh geometry={nodes.Circle012.geometry} material={materials['Material.002']} />

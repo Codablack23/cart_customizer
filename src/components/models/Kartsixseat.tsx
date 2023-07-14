@@ -275,7 +275,8 @@ type GLTFResult = GLTF & {
     ['Rough Iron Steel']: THREE.MeshStandardMaterial
     ['Material.044']: THREE.MeshStandardMaterial
     ['Glass.001']: THREE.MeshStandardMaterial
-    ['Material.017']: THREE.MeshStandardMaterial
+    ['Material.017']: THREE.MeshStandardMaterial,
+    mojo: THREE.MeshStandardMaterial
   }
 }
 

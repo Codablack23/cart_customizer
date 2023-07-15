@@ -407,6 +407,7 @@ export function FourSeaterKartModel(props: JSX.IntrinsicElements['group']) {
       <mesh geometry={nodes.Plane022.geometry} material={materials['Rough Iron Steel.001']}>
         <mesh geometry={nodes.Plane021.geometry} material={materials['Material.038']} />
       </mesh>
+      <mesh geometry={nodes.mojo.geometry} material={materials.mojo} />
       <mesh geometry={nodes.mojo001.geometry} material={materials.mojo} />
       <mesh geometry={nodes.Plane023.geometry} material={materials['Dark Steel.002']} />
       <mesh geometry={nodes.Cylinder010.geometry} material={nodes.Cylinder010.material} />

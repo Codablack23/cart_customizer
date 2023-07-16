@@ -26,7 +26,7 @@ interface AllFeature{
 export const cart = [
   {id:1,cartName:"Four Seater Cart",Component:FourSeaterKartModel},
   {id:2,cartName:"Four Seater Cart Opposite Each Other",Component:FourSeaterOppositeKartModel},
-  {id:2,cartName:"Six Seater Cart",Component:SixSeaterKartModel},
+  {id:3,cartName:"Six Seater Cart",Component:SixSeaterKartModel},
   // {id:3,cartName:""},
 ]
 export const environments = [
